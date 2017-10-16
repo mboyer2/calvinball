@@ -18,7 +18,9 @@
         */
 
 
-        //Player One
+        //Player One 
+
+
         var score = 193;
         var last_play = "Q";
         var broom = "handle";
@@ -26,33 +28,79 @@
         var is_in_tree = false;
         var crying = false;
 
-        if (typeof score !== "number"){
+
+//SCORE = 332
+        
+        //Player Two
+        // var score = 394;
+        // var last_play = "W";
+        // var broom = "none";
+        // var has_ball = true;
+        // var is_in_tree = true;
+        // var crying = false;
+
+//SCORE = 419.5
+
+        //Player Three
+        // var score = "f";
+        // var last_play = 1.5;
+        // var broom = "brush";
+        // var has_ball = true;
+        // var is_in_tree = false;
+        // var crying = true;
+
+//SCORE = 900
+        
+         if (typeof score !== "number"){
             score=500
         }
 
-        console.log(score)
+        console.log("question1 " + score)
 
-        /*
-        //Player Two
-        var score = 394;
-        var last_play = "W";
-        var broom = "none";
-        var has_ball = true;
-        var is_in_tree = true;
-        var crying = false;
-        */
+        if (crying === true){
+            score = score - 300
+        } else{
+            score = score + 50
+        }
 
-        /*
-        //Player Three
-        var score = "f";
-        var last_play = 1.5;
-        var broom = "brush";
-        var has_ball = true;
-        var is_in_tree = false;
-        var crying = true;
-        */
+        console.log("question2 " + score)
+
+        if (last_play === "Q"){
+            score = score - 77
+        }
+
+        console.log("question3 " + score)
+
+        if ((is_in_tree === true) && (typeof last_play === "string")){
+            score = score + 395
+        }
+
+        console.log("question4 " + score)
+
+        if (broom ==="handle"){
+            score = score * 2
+        } else if (broom === "brush"){
+            score = score *3
+        } else{
+            score = score /2
+        }
+
+        console.log("question5 " + score)
+
+        if ((has_ball === true) && (is_in_tree === false) && (crying ===false)){
+            score = score * 1.5
+        }
+
+        console.log("question6 " + score)
+
+        if (typeof last_play === "number"){
+            score = score * last_play
+        }
+
+        console.log("question7 " + score)
 
 
 
-        console.log(score);
+
+
 
